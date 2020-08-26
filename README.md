@@ -11,7 +11,7 @@ Single-object tracking based on histograms: color-based tracker, gradient-based 
   - parameters:
     - number of histograms bins (#bins) 
     - number of generated candidates (#cand)
-  - evaluate the performance of the color-tracker
+  - evaluate the performance of the color-tracker with real sequence from [votchallengeNet](https://www.votchallenge.net/)
 
 
 -task2:
@@ -22,7 +22,7 @@ Single-object tracking based on histograms: color-based tracker, gradient-based 
   - parameters:
     - number of bins (#bins) (#bins allows changing HOG descriptor length)
     - number of generated candidates (#cand)
-    - evaluate the performance of the gradient-tracker
+    - evaluate the performance of the gradient-tracker with real sequence from [votchallengeNet](https://www.votchallenge.net/)
 
 Modifications of the original paper:
   - As gradient features, compute the HOG descriptor using the HOGdescriptor class of OpenCV
@@ -35,7 +35,7 @@ Modifications of the original paper:
   - For each feature, obtain the scores by comparing object and candidate models. Then, obtain the normalized scores for each feature.
   - Select the candidate minimizing the combination of both normalized scores
   - The algorithm is able to choose each feature (color/gradient) or fusion.
-  - evaluate the performance of the colorgradient_fusion_tracker
+  - evaluate the performance of the colorgradient_fusion_tracker with real sequence from [votchallengeNet](https://www.votchallenge.net/)
 Modifications of the original paper:
   - As color features, use the color channel with highest performance in task 1
   - As gradient features, use HOG from task 2
